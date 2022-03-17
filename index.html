@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Perforce Software">
-    <meta name="description" content="Example content for use with Perforce Helix Core Actions within GitHub Actions Marketplace">
+    <meta name="description"
+        content="Example content for use with Perforce Helix Core Actions within GitHub Actions Marketplace">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <link rel="shortcut icon" href="logo-icon-black.svg">
     <title>Perforce Helix Core Actions - Example</title>
 </head>
-<body style="background: #777777">
-    <noscript><strong>We're sorry but "Perforce Helix Core Actions - Example" doesn't work properly without JavaScript enabled. Please enable it
-        to continue.</strong></noscript>
+
+<body style="background: #990000">
+    <noscript><strong>We're sorry but "Perforce Helix Core Actions - Example" doesn't work properly without JavaScript
+            enabled. Please enable it
+            to continue.</strong></noscript>
     <script src="jquery.min.js"></script>
     <script src="three.js"></script>
     <script src="fflate.min.js"></script>
     <script src="FBXLoader.js"></script>
     <script type="application/javascript">
-        (function(){
+        (function () {
             var camera, scene, renderer;
             var geometry, material, mesh;
 
             // Renderer
             if (window.WebGLRenderingContext)
-                renderer = new THREE.WebGLRenderer({alpha: true});
+                renderer = new THREE.WebGLRenderer({ alpha: true });
             else
-                renderer = new THREE.CanvasRenderer({alpha: true});
+                renderer = new THREE.CanvasRenderer({ alpha: true });
 
             renderer.setSize(window.innerWidth, window.innerHeight);
             $('body').append(renderer.domElement);
@@ -44,7 +48,7 @@
                 (object) => {
                     scene.add(object)
 
-                    var animate = function() {
+                    var animate = function () {
                         requestAnimationFrame(animate);
                         object.rotation.x = Date.now() * 0.0005;
                         object.rotation.y = Date.now() * 0.001;
@@ -83,4 +87,5 @@
         })();
     </script>
 </body>
+
 </html>
